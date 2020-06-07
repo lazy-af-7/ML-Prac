@@ -2,11 +2,11 @@
 These are some ML Notebooks I'm practicing as a revision, datasets will be alongside in the repo
 
 Some notes I though would be useful
-'''
+
+```python
 from sklearn.base import clone
-# prepare the data
-poly_scaler = Pipeline([
-              ("poly_features", PolynomialFeatures(degree=90, include_bias=False)),
+poly_scaler = Pipeline([    
+	     ("poly_features", PolynomialFeatures(degree=90, include_bias=False)),
               ("std_scaler", StandardScaler())
               ])
               
@@ -25,6 +25,6 @@ for epoch in range(1000):
                   minimum_val_error = val_error
                   best_epoch = epoch
                   best_model = clone(sgd_reg)
-'''
+```
 Note that with warm_start=True, when the fit() method is called it continues training
 where it left off, instead of restarting from scratch.
